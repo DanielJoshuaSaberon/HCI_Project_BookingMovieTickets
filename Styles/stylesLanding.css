@@ -85,6 +85,87 @@ header{
 
 
 /*TRAILER*/
+body {
+    background-color: #000a1f;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 150px auto;
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all ease-in-out 0.5s;
+    border-radius: 50%;
+}
+
+.container img:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    text-align: center;
+    display:contents;
+    align-items: center; 
+    justify-content: center;
+}
+
+.modal video {
+    width: 500%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #aaa;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
 /*END OF TRAILER*/
 
 /*NOW-SHOWING*/
