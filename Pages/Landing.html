@@ -10,7 +10,7 @@
     <header>
         <h2 class="logo title">Bulatao Cinema</h2>
         <nav class="navigation">
-            <a href="">Home</a>
+            <a href="/Pages/Landing.html">Home</a>
             <a href="">Movies</a>       
             <a href="">Buy Ticket</a>
             <a href="">Coming Soon</a>
@@ -19,26 +19,28 @@
             </a>
         </nav>
     </header>
-    <!-- Trailer -->
-     
-    <div class="container">
-        <a href="#trailer1" class="trailer-link">
-            <img src="../Contents/1.jpeg" alt="Trailer 1">
-        </a>
-        <a href="#trailer2" class="trailer-link">
-            <img src="../Contents/2.jpg" alt="Trailer 2">
-        </a>
-        <a href="#trailer3" class="trailer-link">
-            <img src="../Contents/3.jpg" alt="Trailer 3">
-        </a>
-        <a href="#trailer4" class="trailer-link">
-            <img src="../Contents/4.jpg" alt="Trailer 4">
-        </a>
-        <a href="#trailer5" class="trailer-link">
-            <img src="../Contents/5.jpg" alt="Trailer 5">
-        </a>
-    </div>
 
+    <!-- Trailer -->
+    <div class="trailer-container" id="trailer">
+        <div class="label-trailer">Trailers</div>
+        <div class="trailers-wrapper">
+            <a href="#trailer1" class="trailer-link">
+                <img src="../Contents/1.jpeg" alt="Trailer 1">
+            </a>
+            <a href="#trailer2" class="trailer-link">
+                <img src="../Contents/2.jpg" alt="Trailer 2">
+            </a>
+            <a href="#trailer3" class="trailer-link">
+                <img src="../Contents/3.jpg" alt="Trailer 3">
+            </a>
+            <a href="#trailer4" class="trailer-link">
+                <img src="../Contents/4.jpg" alt="Trailer 4">
+            </a>
+            <a href="#trailer5" class="trailer-link">
+                <img src="../Contents/5.jpg" alt="Trailer 5">
+            </a>
+        </div>
+    </div>
     <!-- Modal structure for trailers -->
     <div id="trailer1" class="modal">
         <div class="modal-content">
@@ -49,7 +51,6 @@
             </video>
         </div>
     </div>
-
     <div id="trailer2" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -59,7 +60,6 @@
             </video>
         </div>
     </div>
-
     <div id="trailer3" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -69,7 +69,6 @@
             </video>
         </div>
     </div>
-
     <div id="trailer4" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -79,7 +78,6 @@
             </video>
         </div>
     </div>
-
     <div id="trailer5" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -89,15 +87,11 @@
             </video>
         </div>
     </div>
-
-    <script src="script.js"></script>
     
     <!-- Now-Showing -->
     <div class="now-showing container">
-
     </div>
 
     <script src="../Script/landing.js"> </script>
-
 </body>
 </html>

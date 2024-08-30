@@ -84,22 +84,28 @@ header{
 
 
 /*TRAILER*/
-body {
-    background-color: #000a1f;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    margin: 150px auto;
-    width: 10%;
+.trailer-container {
+    color: var(--default--color);
+    margin: 120px 45px auto;
+    width: 80%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
 }
-
-.container img {
+.label-trailer { 
+    color: var(--default--color);
+    margin-bottom: 15px; 
+    font-size: 30px;   
+    font-family: var(--main--font);
+    font-weight: 600;
+}
+.trailers-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+.trailer-link img {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -107,11 +113,9 @@ body {
     transition: all ease-in-out 0.5s;
     border-radius: 50%;
 }
-
-.container img:hover {
+.trailer-link img:hover {
     transform: scale(1.2);
 }
-
 .modal {
     display: none;
     position: fixed;
@@ -125,7 +129,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .modal-content {
     background-color: #fefefe;
     padding: 20px;
@@ -138,14 +141,11 @@ body {
     align-items: center; 
     justify-content: center;
 }
-
 .modal video {
     width: 500%;
     height: 100%;
-    border-radius: 10px;
-    
+    border-radius: 10px; 
 }
-
 .close {
     position: absolute;
     top: 10px;
@@ -155,16 +155,11 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-
-
-
 /*END OF TRAILER*/
 
 /*NOW-SHOWING*/
