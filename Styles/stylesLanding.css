@@ -15,6 +15,8 @@
 }
 body{ 
     background-color: var(--background--color2);
+    width: 100%;
+    height: 100vh;
 }
 
 /*NAVBAR*/
@@ -89,7 +91,6 @@ header{
     margin: 120px 45px auto;
     width: 80%;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
 }
 .label-trailer { 
@@ -163,4 +164,49 @@ header{
 /*END OF TRAILER*/
 
 /*NOW-SHOWING*/
-/*END OF MOVIES*/
+.main-scroll-div{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.label-showing{
+    color: var(--default--color);
+    font-size: 30px;   
+    margin: 14px 15px;
+    font-family: var(--main--font);
+    font-weight: 600;
+}
+
+.cover{ 
+    position: relative;
+    width: 95%;
+    height: 50%;
+    /* border: 2px solid red; */
+}
+.scroll-images{ 
+    width: 90%;
+    height: auto;
+    display: flex;  
+    margin-left: 45px;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    gap: 30px;
+
+}
+/* .scroll-images::-webkit-scrollbar {
+    display: none;
+} */
+.child { 
+    min-width: 300px;
+    height: 480px;
+    margin: 1px 10px;
+    cursor: pointer;
+    border: 1px solid var(--default--color);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+/*END OF SHOWING*/
