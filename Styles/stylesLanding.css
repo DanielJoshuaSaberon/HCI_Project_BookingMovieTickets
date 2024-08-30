@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible');
+
+/*DITO NA YUNG MGA PAULIT ULIT NA STYLE*/
+:root{  
+    --background--color1: #8283a249;
+    --background--color2: #000A1F;
+    --default--color: white;
+    --main--font:"Atkinson Hyperlegible", sans-serif;
+}
+*{
+ font-family: var(--main--font);
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{ 
+    background-color: var(--background--color2);
+}
+
+/*NAVBAR*/
+header{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px 20px 80px;
+    background-color: var(--background--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{ 
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+.navigation a{ 
+    position: relative;
+    font-size: 1.1em;
+    color: var(--default--color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 3px;
+    background-color: var(--default--color);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.navigation a:nth-child(1)::after { width: 49px; }
+.navigation a:nth-child(2)::after { width: 58px; }
+.navigation a:nth-child(3)::after { width: 83px; }
+.navigation a:nth-child(4)::after { width: 108px; }
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navigation .btnLogin{
+    width: 130px;
+    height: 50px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: 2px solid var(--default--color);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--default--color);
+    transition: 0.5s;
+}
+.navigation .btnLogin:hover{ 
+    background-color: var(--default--color);
+    color: var(--background--color2);
+}
+/*END OF NAVBAR*/
+
+
+/*TRAILER*/
+/*END OF TRAILER*/
+
+/*MOVIES*/
+/*END OF MOVIES*/
