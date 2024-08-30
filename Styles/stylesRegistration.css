@@ -9,7 +9,6 @@
 }
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: var(--main--font)
   }
@@ -74,13 +73,15 @@
   .user-details .input-box input:valid{
     border-color: #000A1F;
   }
-   form input[type="radio"]{
-     display: none;
-   }
+
    form .button{
-     height: 45px;
-     margin: 35px 0
+    width: 47%;
+    height: 45px;
+    display: flex;
+    margin-left: 53%;
+    gap: 20px;
    }
+
    form .button input{
      height: 100%;
      width: 100%;
