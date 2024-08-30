@@ -2,7 +2,7 @@
 
 /*DITO NA YUNG MGA PAULIT ULIT NA STYLE*/
 :root{  
-    --background--color1: #8283a249;
+    --background--color1: #121D31;
     --background--color2: #000A1F;
     --default--color: white;
     --main--font:"Atkinson Hyperlegible", sans-serif;
@@ -25,21 +25,21 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 50px 20px 80px;
+    padding: 20px 50px 20px 70px;
     background-color: var(--background--color1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
-}
-.logo{ 
-    font-size: 2em;
-    color: white;
+}   
+.logo img{ 
     user-select: none;
+    width: 100%;
+    height: 90px;
 }
 .navigation a{ 
     position: relative;
-    font-size: 1.1em;
+    font-size: 1.3em;
     color: var(--default--color);
     text-decoration: none;
     font-weight: 500;
@@ -88,7 +88,7 @@ header{
 /*TRAILER*/
 .trailer-container {
     color: var(--default--color);
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: 40px;
     width: 80%;
     display: flex;
