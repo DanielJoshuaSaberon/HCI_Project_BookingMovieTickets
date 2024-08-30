@@ -8,23 +8,21 @@
     --main--font:"Atkinson Hyperlegible", sans-serif;
 }
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--main--font)
-  }
-  body{
+ font-family: var(--main--font);
+ margin: 0;
+ box-sizing: border-box;
+}
+body{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    background: #000A1F;
+    background-color: var(--background--color2);
   }
   .container{
     max-width: 700px;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--default--color);
     padding: 25px 30px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
@@ -97,6 +95,14 @@
    form .button input:hover{
     background: #AAB2CC;
     }
+
+    .container ul{ 
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+    }
    @media(max-width: 584px){
    .container{
     max-width: 100%;
@@ -120,4 +126,4 @@
     .container .content .category{
       flex-direction: column;
     }
-  }
+  } 
