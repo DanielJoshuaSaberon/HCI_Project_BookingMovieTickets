@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulatao Cinema</title>
     <link rel="stylesheet" href="../Styles/stylesLanding.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -21,8 +22,8 @@
     </header>
 
     <!-- Trailer -->
+    <div class="label-trailer">Trailers</div>
     <div class="trailer-container" id="trailer">
-        <div class="label-trailer">Trailers</div>
         <div class="trailers-wrapper">
             <a href="#trailer1" class="trailer-link">
                 <img src="../Contents/1.jpeg" alt="Trailer 1">
@@ -89,9 +90,11 @@
     </div>
     
     <!-- Now-Showing -->
+        <div class="label-showing">Now Showing</div>
         <div class="main-scroll-div">
-            <div class=""></div>
-            <div class="label-showing">Now Showing</div>
+            <div>
+                <button class="icon left" onclick="scrollL()"><i class="fa-solid fa-arrow-left-long"></i></button>
+            </div>
             <div class="cover">
                 <div class="scroll-images">
                     <div class="child"><img class="image-class" src="../Contents/movie1.jpg" alt="Images 1"></div>
@@ -101,9 +104,10 @@
                     <div class="child"><img class="image-class" src="../Contents/movie5.jpg" alt="Images 5"></div>
                 </div>
             </div>
-            <div class=""></div>
+            <div>
+                <button class="icon right" onclick="scrollR()"><i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
         </div>
-
     <script src="../Script/landing.js"> </script>   
 </body>
 </html>

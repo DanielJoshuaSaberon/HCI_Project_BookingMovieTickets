@@ -77,3 +77,17 @@ function closeModal(modal) {
         }
     }
 }
+
+
+//SCROLL FUNCTIONS
+function scrollL(){ 
+    var left = document.querySelector(".scroll-images");
+    console.log("working");
+    left.scrollBy(-300,0)
+}
+
+function scrollR(){ 
+    var right = document.querySelector(".scroll-images");
+    console.log("working");
+    right.scrollBy(300,0)
+}

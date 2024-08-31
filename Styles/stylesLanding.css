@@ -86,19 +86,23 @@ header{
 
 
 /*TRAILER*/
-.trailer-container {
-    color: var(--default--color);
-    margin-top: 150px;
-    margin-left: 40px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-}
 .label-trailer { 
+    position: absolute;
+    top: 160px ;
+    left: 30px;
+    z-index: 4;
     color: var(--default--color);
     font-size: 30px;   
     font-family: var(--main--font);
     font-weight: 600;
+}
+.trailer-container {
+    color: var(--default--color);
+    margin-top: 200px;
+    margin-left: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 .trailers-wrapper {
     display: flex;
@@ -165,43 +169,68 @@ header{
 /*END OF TRAILER*/
 
 /*NOW-SHOWING*/
-.main-scroll-div{
-    width: 100%;
-    height: 100%;
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-}
 .label-showing{
-    padding-left: 40px;
-    margin: 18px 0 10px;
     color: var(--default--color);
     font-size: 30px;   
     font-family: var(--main--font);
     font-weight: 600;
+    position: absolute;
+    z-index: 4;
+    top: 350px; 
+    left: 30px; 
 }
-
+.main-scroll-div {
+    position: relative;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
 .cover{ 
     position: relative;
-    width: 95%;
-    height: 50%;
-    align-self: center;
-    /* border: 2px solid red; */
+    width: 90%;
+    height: 100%;
+}
+.cover::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 3;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, 
+                var(--background--color2) 0%, 
+                var(--background--color2) 50%, 
+                transparent 100%);
+}
+.cover::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    z-index: 3;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(-90deg, 
+                var(--background--color2) 0%, 
+                var(--background--color2) 50%,
+                transparent 100%);
 }
 .scroll-images{ 
     width: 90%;
-    height: auto;
+    height: 106%;
     display: flex;  
-    margin-left: 45px;
     overflow: auto;
+    margin: auto auto auto 80px;
     position: relative;
     scroll-behavior: smooth;
     gap: 30px;
-
 }
-/* .scroll-images::-webkit-scrollbar {
+.scroll-images::-webkit-scrollbar {
     display: none;
-} */
+}
 .child { 
     min-width: 300px;
     height: 480px;
@@ -210,5 +239,26 @@ header{
     border: 1px solid var(--default--color);
     overflow: hidden;
     flex-shrink: 0;
+}
+.icon{
+    color: red;
+    background-color: var(--background--color2);
+    font-size: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position:absolute;
+    z-index: 4;
+    transition: transform 0.3s ease-in-out;
+}
+.icon:hover{
+    transform: scale(1.25); 
+    color: var(--default--color);
+}
+.left {
+    left: 60px; 
+}
+.right {
+    right: 60px;
 }
 /*END OF SHOWING*/
