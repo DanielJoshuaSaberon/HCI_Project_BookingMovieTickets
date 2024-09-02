@@ -240,13 +240,12 @@ header{
     overflow: hidden;
     flex-shrink: 0;
 }
-
 .child img {
     transition: filter 0.3s ease;
 }
 
 .child img:hover {
-    filter: brightness(70%);
+    filter: brightness(60%);
 }
 
 .icon{
