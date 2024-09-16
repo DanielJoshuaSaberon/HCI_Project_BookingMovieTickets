@@ -26,11 +26,12 @@ body {
 
 /* Header */
 header {
+    background-color: var(--background-color1);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--background-color1);
+    
     display: flex;
     flex-direction: column;
     padding: 20px 50px;
@@ -42,64 +43,97 @@ header {
 }
 
 nav ul {
+    background-color: rgb(17, 17, 68);
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
 
-nav ul li {
+nav ul li {    
     color: var(--default-color);
-    font-size: 24px;
+    font-size: 45px;
     font-weight: 900;
     text-align: center;
 }
 
+nav ul li:first-child {
+    background-color: white;
+    color: var(--background-color2);
+    padding: 10px;
+    border-radius: 5px; 
+    width: 700px;
+}
+
+nav ul li:nth-child(2) {
+    color: white;
+    padding: 10px;
+    border-radius: 5px; 
+    width: 700px;
+}
+
+nav ul li:last-child {
+    color: white;
+    padding: 10px;
+    border-radius: 5px; 
+    width: 700px;
+}
+
 /* Main Content */
+
 main {
-    margin-top: 150px;
+    margin-top: 100px; 
+    margin-left: 0; 
+    padding-left: 0; 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; 
 }
 
 .ticket-info {
-    width: 80%;
-    background-color: var(--background-color1);
-    padding: 20px;
-    border-radius: 10px;
+    width: auto; 
+    padding: 30px; 
+    margin-top: 90px; 
 }
 
 .movie-details {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
+    margin-top: 20px;
 }
 
+
 .movie-details img {
-    height: 200px;
+    height: 500px;
+    margin-left: 25px;
     border-radius: 10px;
+
 }
 
 .details {
     flex: 1;
     margin-left: 20px;
+    margin-top: 20px;
 }
 
 .details h1 {
-    font-size: 32px;
+    font-size: 50px;
     margin-bottom: 10px;
 }
 
-.details p {
+.details h2 {
+    color: rgb(199, 193, 193);
     font-size: 20px;
-    margin: 5px 0;
+    margin: 5px;
 }
 
 .time {
     background-color: var(--background-color2);
     border: 2px solid var(--button-border-color);
     padding: 10px 20px;
-    font-size: 24px;
+    margin-right: 50px;
+    margin-bottom: 430px;
+    font-size: 2em;
     font-weight: bold;
     color: var(--button-text-color);
 }
@@ -108,67 +142,116 @@ main {
 .ticket-btns {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; 
+    width: 300px;
 }
 
 .ticket-btn {
     background-color: transparent;
-    border: 2px solid var(--button-border-color);
-    padding: 10px;
-    font-size: 18px;
-    color: var(--button-text-color);
+    border: 2px solid red;
+    color: white;
+    padding: 20px 20px;
+    font-size: 1.5em;
+    font-weight: bolder;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 5px;
+    width: 90%; /* Adjust width to fill the container */
 }
 
 .ticket-btn:hover {
-    background-color: var(--button-border-color);
+    background-color: red;
 }
 
 /* Summary Table */
 .summary-table {
-    margin-top: 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    color: white;
+    background-color: #1d1c1c; /* Dark background for the table */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+    
 }
-
-.table-header,
-.table-row {
+.table-header, .table-row {
     display: contents;
 }
 
-.table-header div,
-.table-row div {
+.table-header div, .table-row div {
     text-align: center;
     padding: 10px;
 }
 
 .table-header div {
     font-weight: bold;
+    font-size: 1.8em;
+}
+
+.table-header div:first-child {  /* Target only the first cell in the header */
+    font-size: 2.2em;  /* Increased font size */
+    font-weight: bold;
+}
+
+#ticket-type {
+    font-size: 1.5em;  
+    font-weight: bold;
+}
+
+#ticket-cost {
+    font-size: 1.5em;   
+    font-weight: bold;
 }
 
 .quantity-control {
-    display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2em;
 }
 
 .quantity-control button {
-    background-color: var(--button-border-color);
-    color: var(--button-text-color);
+    background-color: red;
+    color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    font-size: 16px;
     cursor: pointer;
 }
 
+.quantity-control button:hover {
+    background-color: darkred;
+}
+
+.quantity-control span {
+    padding: 5px 20px;
+    background-color: #222; 
+    border: none;
+}
+
+#subtotal {
+    font-size: 1.5em; 
+    font-weight: bold;
+}
+
 #next-btn {
-    width: 100%;
+    position: absolute;
+    margin-left: 1270px;
+    width: 200px;
     padding: 15px;
     background-color: red;
+    border-radius: 10px;
     color: white;
     font-size: 18px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+    top: 400px; /* Increase this value to move the button down */
+}
+
+#next-btn:hover {
+    background-color: darkred;
 }

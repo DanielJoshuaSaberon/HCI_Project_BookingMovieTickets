@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to get the query parameter from the URL
+    // Function to get query parameters from the URL
     function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     }
 
-    // Get the selected time from the URL
+    // Get the selected time and date from the URL
     const selectedTime = getQueryParam('time');
+    const selectedDate = getQueryParam('date');
 
+    // Display the selected time and date on the page
     if (selectedTime) {
         document.getElementById('showtime').textContent = selectedTime;
+    }
+    if (selectedDate) {
+        document.getElementById('showdate').textContent = selectedDate;
     }
 });
 

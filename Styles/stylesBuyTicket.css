@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700;900&display=swap');
+
 :root {
     --background--color1: #121D31;
     --background--color2: #000A1F;
@@ -104,11 +107,14 @@ header {
 
 .movie-title h1 {
     font-size: 3em;
-    margin: 0;
-    color: var(--default--color);
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
+}
+
+.movie-title p {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .movie-info {
@@ -214,21 +220,20 @@ header {
 
 .time-btn:hover {
     background-color: red;
-    color: #000A1F;
 }
 
 .buy-ticket-btn {
-    background-color: blue;
+    background-color: rgb(60, 60, 202);
     color: white;
-    padding: 15px 20px;
+    padding: 35px 20px;
     border: none;
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: bold;
     cursor: pointer;
     margin-top: 125px;
     margin-left: 20px;
     transition: background-color 0.3s;
-    border-radius: 5px;
+    border-radius: px;
 }
 
 .buy-ticket-btn:hover {

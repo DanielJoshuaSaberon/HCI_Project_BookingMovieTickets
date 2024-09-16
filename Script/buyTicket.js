@@ -1,20 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let selectedTime = null; // To store the selected time
+    let selectedShowtime = { time: null, date: null}; // To store the selected time and date
 
     // Function to handle the time button click
     const timeButtons = document.querySelectorAll('.time-btn');
     timeButtons.forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function (event) {
+            event.stopPropagation();
+
             // Remove the active state from all buttons
-            timeButtons.forEach(btn => btn.style.backgroundColor = '#000A1F');
-            timeButtons.forEach(btn => btn.style.color = '#FFFFFF');
+            timeButtons.forEach(btn => {
+                btn.style.backgroundColor = '#000A1F';
+                btn.style.color = '#FFFFFF';
+                btn.classList.remove('selected');
+            });
 
-            // Set the clicked button's background to red
+            // Set the clicked button's background to red and add 'selected' class
             this.style.backgroundColor = 'red';
-            this.style.color = '#000A1F';
+            this.style.color = '#FFFFFF';
+            this.classList.add('selected');
 
-            // Store the selected time
-            selectedTime = this.textContent.trim();
+            // Get the time and date from the clicked button's data attributes
+            selectedShowtime.time = this.getAttribute('data-time');
+            selectedShowtime.date = this.getAttribute('data-date');
         });
     });
 
@@ -22,12 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const buyTicketButtons = document.querySelectorAll('.buy-ticket-btn');
     buyTicketButtons.forEach(button => {
         button.addEventListener('click', function () {
-            if (selectedTime) {
-                // Redirect to BookTicket.html and pass the selected time as a query parameter
-                window.location.href = `BookTicket.html?time=${encodeURIComponent(selectedTime)}`;
+            if (selectedShowtime.time && selectedShowtime.date) {
+                window.location.href = `/Pages/bookTicket.html?time=${encodeURIComponent(selectedShowtime.time)}&date=${encodeURIComponent(selectedShowtime.date)}`;
             } else {
-                alert('Please select a time before proceeding.');
+                alert('Please select a showtime before proceeding.');
             }
         });
+    });
+
+    // Handle clicks outside the time buttons to reset the selection
+    document.addEventListener('click', function () {
+        // Reset the style of all buttons
+        timeButtons.forEach(btn => {
+            btn.style.backgroundColor = '#000A1F';
+            btn.style.color = '#FFFFFF';
+        });
+
+        // Clear the selected showtime
+        selectedShowtime.time = null;
+        selectedShowtime.date = null;
     });
 });
