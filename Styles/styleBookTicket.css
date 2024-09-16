@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700;900&display=swap');
+
+:root {
+    --background-color1: #121D31;
+    --background-color2: #000A1F;
+    --default-color: white;
+    --button-border-color: red;
+    --button-text-color: white;
+    --main-font: "Atkinson Hyperlegible", sans-serif;
+}
+
+* {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color2);
+    color: var(--default-color);
+    width: 100%;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    z-index: 99;
+}
+
+.logo img {
+    height: 90px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    color: var(--default-color);
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* Main Content */
+main {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-info {
+    width: 80%;
+    background-color: var(--background-color1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-details img {
+    height: 200px;
+    border-radius: 10px;
+}
+
+.details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.details h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.details p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.time {
+    background-color: var(--background-color2);
+    border: 2px solid var(--button-border-color);
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--button-text-color);
+}
+
+/* Ticket Type Buttons */
+.ticket-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ticket-btn {
+    background-color: transparent;
+    border: 2px solid var(--button-border-color);
+    padding: 10px;
+    font-size: 18px;
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ticket-btn:hover {
+    background-color: var(--button-border-color);
+}
+
+/* Summary Table */
+.summary-table {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.table-header,
+.table-row {
+    display: contents;
+}
+
+.table-header div,
+.table-row div {
+    text-align: center;
+    padding: 10px;
+}
+
+.table-header div {
+    font-weight: bold;
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-control button {
+    background-color: var(--button-border-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#next-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}

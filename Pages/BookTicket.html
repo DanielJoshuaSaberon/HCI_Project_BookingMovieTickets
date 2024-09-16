@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="../Styles/styleBookTicket.css">
+</head>
+<body>
+    <header>
+        <div class="logo title">
+            <img src="../Contents/Logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li>1. Book Tickets</li>
+                <li>2. Select Seats</li>
+                <li>3. Confirm</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="ticket-info">
+            <div class="movie-details">
+                <img src="../Contents/johnwick.jpg" alt="John Wick Poster">
+                <div class="details">
+                    <h1>JOHN WICK: CHAPTER 4</h1>
+                    <p>SM Fairview</p>
+                    <p>Monday, 2 September 2024</p>
+                    <p>2D • IMAX</p>
+                </div>
+                <div class="time">
+                    <p id="showtime">9:00 PM</p>
+                </div>
+            </div>
+            <div class="summary-table">
+                <div class="table-header">
+                    <div>Select Types</div>
+                    <div>Tickets</div>
+                    <div>Cost</div>
+                    <div>Qty</div>
+                    <div>Subtotal</div>
+                </div>
+                <div class="table-row">
+                    <div class="ticket-btns">
+                        <button class="ticket-btn standard">STANDARD</button>
+                        <button class="ticket-btn imax">IMAX</button>
+                        <button class="ticket-btn vip">VIP</button>
+                    </div>
+                    <div id="ticket-type">STANDARD</div> 
+                    <div id="ticket-cost">300.00</div> 
+                    <div class="quantity-control">
+                        <button id="decrease">-</button>
+                        <span id="quantity">1</span>
+                        <button id="increase">+</button>
+                    </div>
+                    <div id="subtotal">300.00</div> 
+                </div>
+                
+                <div class="next-button">
+                    <button id="next-btn">NEXT</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../Script/bookTicket.js"></script>
+</body>
+</html>
