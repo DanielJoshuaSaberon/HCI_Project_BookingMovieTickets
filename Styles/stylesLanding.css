@@ -270,3 +270,23 @@ header{
     right: 60px;
 }
 /*END OF SHOWING*/
+
+/*COMING SOON*/
+.label-coming{
+    color: var(--default--color);
+    font-size: 30px;   
+    font-family: var(--main--font);
+    font-weight: 600;
+    margin: 50px auto 0 30px;
+} 
+.main-showing{ 
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: red solid 2px;
+} 
+/* to be continued --sab  */
+/*END OF COMING SOON*/
